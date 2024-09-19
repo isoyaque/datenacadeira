@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
     height: 100vh;
     overflow: hidden;
@@ -182,11 +183,11 @@ body {
         0% {
             transform: translateX(0);
         }
-    
+
         50% {
             transform: translateX(calc(95vw - 100px));
         }
-    
+
         100% {
             transform: translateX(0);
         }
@@ -194,18 +195,18 @@ body {
 
     .atirou {
         animation: tiro 1.5s linear forwards;
-    
+
     }
 
-    #reiniciar{
+    #reiniciar {
         font-size: 2rem;
     }
 
-    #atirar{
+    #atirar {
         font-size: 4rem;
     }
 
-    #game{
+    #game {
         margin-top: 2rem;
         width: 95vw;
     }
