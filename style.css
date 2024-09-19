@@ -1,0 +1,203 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(34, 34, 34);
+    width: 100vw;
+}
+
+#game {
+    background-image: url(imagens/bg.webp);
+    background-position: center;
+    background-size: cover;
+    width: 70%;
+    height: 80%;
+    position: relative;
+    margin: 0 auto;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 1;
+    transition: 1s;
+    margin-top: 1rem;
+}
+
+#ganhou {
+    background-image: url(imagens/ganhou.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 1rem;
+    margin: 0 15vw;
+    opacity: 0;
+    transition: 1s;
+}
+
+#atirar,
+#reiniciar {
+    width: 60vw;
+    height: 7rem;
+    font-size: 5rem;
+    border: none;
+    background-color: rgb(37, 0, 37);
+    color: white;
+    border-radius: 50px;
+    margin: .5rem 20vw;
+    transition: .1s;
+}
+
+#atirar {
+    display: block;
+}
+
+#reiniciar {
+    display: none;
+}
+
+
+#atirar:active,
+#reiniciar:active {
+    background-color: rgb(70, 0, 70);
+}
+
+#nave {
+    width: 250px;
+    height: 150px;
+    background-image: url(imagens/Datena.png);
+    background-position: center;
+    background-size: cover;
+    margin: 1rem;
+    position: absolute;
+    animation: lado-nave 10s infinite linear;
+    filter: drop-shadow(0px 0px 4px #ffffff);
+}
+
+@keyframes lado-nave {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(70vw - 300px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#alvo {
+    width: 200px;
+    height: 150px;
+    background-image: url(imagens/Pablo.png);
+    background-position: center;
+    background-size: cover;
+    margin: 1rem;
+    animation: lado-alvo 5s infinite;
+    bottom: 1rem;
+    position: absolute;
+    filter: drop-shadow(0px 0px 4px #ffffff);
+}
+
+@keyframes lado-alvo {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(calc(70vw - 250px));
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#tiro {
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: contain;
+    background-image: url(imagens/cadeira.png);
+    position: absolute;
+    margin: 0 auto;
+}
+
+.atirou {
+    animation: tiro 1.5s linear forwards;
+
+}
+
+@keyframes tiro {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    #nave {
+        width: 150px;
+        height: 100px;
+        animation: lado-nave 5s infinite linear;
+
+    }
+
+    #alvo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #tiro {
+        width: 70px;
+        height: 70px;
+    }
+
+    @keyframes lado-nave {
+        0% {
+            transform: translateX(0);
+        }
+
+        50% {
+            transform: translateX(calc(70vw - 180px));
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes lado-alvo {
+        0% {
+            transform: translateX(0);
+        }
+    
+        50% {
+            transform: translateX(calc(70vw - 100px));
+        }
+    
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .atirou {
+        animation: tiro 1.5s linear forwards;
+    
+    }
+
+    #reiniciar{
+        font-size: 2rem;
+    }
+
+    #game{
+        margin-top: 2rem;
+    }
+}
