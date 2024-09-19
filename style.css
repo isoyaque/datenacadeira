@@ -166,7 +166,7 @@ body {
         }
 
         50% {
-            transform: translateX(calc(70vw - 180px));
+            transform: translateX(calc(95vw - 180px));
         }
 
         100% {
@@ -180,7 +180,7 @@ body {
         }
     
         50% {
-            transform: translateX(calc(70vw - 100px));
+            transform: translateX(calc(95vw - 100px));
         }
     
         100% {
@@ -197,7 +197,12 @@ body {
         font-size: 2rem;
     }
 
+    #atirar{
+        font-size: 4rem;
+    }
+
     #game{
         margin-top: 2rem;
+        width: 95vw;
     }
 }
